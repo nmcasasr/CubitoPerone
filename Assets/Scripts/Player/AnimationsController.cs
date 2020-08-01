@@ -43,7 +43,6 @@ public class AnimationsController : MonoBehaviour
         }
         if (bIsGrounded)
         {
-            print("dassad");
             animator.SetBool("bIsJumping", false);
             animator.SetBool("bIsGrounded", true);
         }

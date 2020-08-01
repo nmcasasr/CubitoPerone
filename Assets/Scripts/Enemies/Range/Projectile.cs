@@ -6,10 +6,14 @@ public class Projectile : MonoBehaviour
 {
     public float speed = 20f;
     public Rigidbody2D rb;
+    private GameObject player;
+    public int damage;
 
     // Start is called before the first frame update
     void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player");
+        damage = 2;
         rb.velocity = transform.right * speed;
     }
 
@@ -18,7 +22,13 @@ public class Projectile : MonoBehaviour
         if (collider.gameObject.CompareTag("Player"))
         {
             //TODO: Take Damage Logic
-            Destroy(gameObject);
+            player.GetComponent<PlayerHealth>().takeDamage(damage);
+            Invoke("DestroyProjectile", 0f);
         }
+    }
+
+    void DestroyProjectile()
+    {
+        Destroy(gameObject);
     }
 }
