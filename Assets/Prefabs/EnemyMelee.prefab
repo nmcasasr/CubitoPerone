@@ -14,9 +14,10 @@ GameObject:
   - component: {fileID: 2441353962762244761}
   - component: {fileID: 2441353962762244762}
   - component: {fileID: 2441353962762244742}
+  - component: {fileID: 3396497377800304631}
   m_Layer: 0
   m_Name: EnemyMelee
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -66,13 +67,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2441353962762244763}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3fb8db1a843e6b7478ac12c181985056, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   transformL: {fileID: 385230036859580630}
-  transformR: {fileID: 0}
   floor: 9
 --- !u!212 &2441353962762244761
 SpriteRenderer:
@@ -171,6 +171,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &3396497377800304631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2441353962762244763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e084012406f03e4182275e7b8dbdb0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 1
+  currhealth: 0
 --- !u!1 &2441353963872692801
 GameObject:
   m_ObjectHideFlags: 0
@@ -282,6 +296,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2441353964416460208}
   - component: {fileID: 2441353964416460223}
+  - component: {fileID: 476990592}
   m_Layer: 0
   m_Name: ViewRange
   m_TagString: Untagged
@@ -329,6 +344,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.5452185, y: 0.09980139}
   m_EdgeRadius: 0
+--- !u!114 &476990592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2441353964416460209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 224ecff5ea285f244b40f9ead6a9e488, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  meleeParent: {fileID: 2441353962762244760}
+  transformL: {fileID: 385230036859580630}
+  floor: 9
 --- !u!1 &8158468044330862038
 GameObject:
   m_ObjectHideFlags: 0

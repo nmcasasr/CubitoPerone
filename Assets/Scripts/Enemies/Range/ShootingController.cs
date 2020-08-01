@@ -13,7 +13,10 @@ public class ShootingController : MonoBehaviour
     
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        parent.setShoot(true);
+        if (collider.gameObject.CompareTag("Player"))
+        {
+            parent.setShoot(true);
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collider)

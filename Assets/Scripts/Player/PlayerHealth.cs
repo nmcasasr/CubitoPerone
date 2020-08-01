@@ -38,6 +38,10 @@ public class PlayerHealth : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.K)){
             this.takeDamage(1);
         }
+        if (currhealth <= 0)
+        {
+            Die();
+        }
     }
 
     public void takeDamage(int damage){
@@ -47,5 +51,9 @@ public class PlayerHealth : MonoBehaviour
             currhealth = 0;
         }
 
+    }
+    void Die()
+    {
+        Destroy(gameObject);
     }
 }

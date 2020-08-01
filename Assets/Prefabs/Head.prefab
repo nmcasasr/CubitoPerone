@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 5660410187413511792}
   m_Layer: 0
   m_Name: Head
-  m_TagString: Untagged
+  m_TagString: Head
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -134,7 +134,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  lifeTime: 10
+  lifeTime: 5
+  damage: 1
 --- !u!61 &4712928778557736703
 BoxCollider2D:
   m_ObjectHideFlags: 0

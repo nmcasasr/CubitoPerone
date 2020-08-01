@@ -15,7 +15,7 @@ public class Movement : MonoBehaviour
     GameObject player;
     Vector2 initBCSize;
     Vector2 initBCOffeset;
-    bool bCanJump;
+    public bool bCanJump;
     AnimationsController aController;
 
     // Start is called before the first frame update
@@ -62,5 +62,10 @@ public class Movement : MonoBehaviour
     private void OnCollisionExit2D(Collision2D collision)
     {
         bCanJump = !(collision.gameObject.CompareTag("Platform"));
+    }
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        bCanJump = (collision.gameObject.CompareTag("Platform"));
+        aController.bIsGrounded = (collision.gameObject.CompareTag("Platform"));
     }
 }

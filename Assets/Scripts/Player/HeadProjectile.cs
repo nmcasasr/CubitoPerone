@@ -6,7 +6,7 @@ public class HeadProjectile : MonoBehaviour
 {
     public float speed;
     public float lifeTime;
-    public float damage;
+    public int damage;
     void Start()
     {
         Invoke("DestroyProjectile", lifeTime);
@@ -26,7 +26,7 @@ public class HeadProjectile : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        speed /= 2;
+        speed = 0;
         if (collision.gameObject.CompareTag("Player"))
         {
             collision.gameObject.GetComponentInChildren<Head>().setCanShoot(true);
@@ -34,8 +34,9 @@ public class HeadProjectile : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            collision.gameObject.GetComponent<PlayerHealth>().takeDamage(damage);
-            Destroy(gameObject);
+            print("Hit Player");
+            collision.gameObject.GetComponent<EnemyHealth>().takeDamage(damage);
+            //Destroy(gameObject);
         }
     }
 }
