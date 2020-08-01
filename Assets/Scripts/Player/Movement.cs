@@ -17,6 +17,7 @@ public class Movement : MonoBehaviour
     Vector2 initBCOffeset;
     bool bCanJump;
     AnimationsController aController;
+
     // Start is called before the first frame update
     void Start()
     {
