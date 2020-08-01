@@ -166,7 +166,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2
   force: 7
-  isGrounded: 0
+  isGrounded: 1
 --- !u!114 &9062119598557470557
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -179,3 +179,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4db0dad08926f544a0a3014f01562d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bIsGrounded: 0
