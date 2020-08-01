@@ -2,24 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShootingController : MonoBehaviour
+public class MeleeController : MonoBehaviour
 {
     // Start is called before the first frame update
-    public EnemyController parent;
+    public EnemyMeleeController meleeParent;
 
     void Start()
     {
-        parent = GetComponentInParent<EnemyController>();    
+        meleeParent = GetComponentInParent<EnemyMeleeController>();
     }
-    
+
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        parent.setShoot(true);
+        meleeParent.setMelee(true);
     }
 
     private void OnTriggerExit2D(Collider2D collider)
     {
-        if(collider.gameObject.CompareTag("Player"))
-            parent.setShoot(false);
+        if (collider.gameObject.CompareTag("Player"))
+            meleeParent.setMelee(false);
     }
 }
