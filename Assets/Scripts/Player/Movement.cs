@@ -34,9 +34,12 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        xMov = Input.GetAxis("Horizontal") * speed;
-        yMov = Input.GetAxis("Jump") * speed;
+        xMov = Input.GetKey(KeyCode.A)?-1:Input.GetKey(KeyCode.D)?1:0;
+        //yMov = Input.GetAxis("Jump") * speed;
+        yMov = Input.GetKey(KeyCode.A)?1:0;
+
         rb.velocity = new Vector2(xMov, rb.velocity.y/speed) * speed;
+        //print(""+rb.velocity+ " " +speed);
 
         if (Input.GetKey(KeyCode.S))
         {
