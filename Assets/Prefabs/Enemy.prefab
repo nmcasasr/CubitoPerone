@@ -103,7 +103,7 @@ MonoBehaviour:
   firePoint: {fileID: 7052335578288292575}
   projectilePrefab: {fileID: 1911172087727718019, guid: 37d4b64f55430b34ba0116b56a9ebf1f,
     type: 3}
-  timeBetweenShots: 2
+  timeBetweenShots: 3
   pastTime: 0
 --- !u!50 &7052335577276426202
 Rigidbody2D:
