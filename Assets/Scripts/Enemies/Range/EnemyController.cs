@@ -30,6 +30,7 @@ public class EnemyController : MonoBehaviour
         //Debug.Log(canShoot);
         //Debug.Log(Time.deltaTime);
 
+        print("\nPlayer: "+player.transform.localPosition.x+"\nEnemy: "+transform.localPosition.x);
         isLeft = player.transform.localPosition.x > transform.localPosition.x;
 
         if (isLeft && !movingRight)
