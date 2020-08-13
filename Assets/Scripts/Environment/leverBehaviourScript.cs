@@ -9,10 +9,16 @@ public class leverBehaviourScript : MonoBehaviour
     
     public GameObject trigger;
 
-    private void OnCollisionEnter2D(Collision2D other) {
-        if(other.gameObject.CompareTag("head")){
+    private void OnTriggerEnter2D(Collider2D other) {
+        if(other.gameObject.CompareTag("Head")){
             this.gameObject.GetComponent<SpriteRenderer>().sprite = onLever;
             trigger.GetComponent<Platform>().Activate();
         }
+    }
+    private void OnTriggerExit2D(Collider2D other) {
+       if(other.gameObject.CompareTag("Head")){
+            this.gameObject.GetComponent<SpriteRenderer>().sprite = offLever;
+            trigger.GetComponent<Platform>().Activate();
+        } 
     }
 }
