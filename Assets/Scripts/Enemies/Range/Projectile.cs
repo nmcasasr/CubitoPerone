@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    public float speed = 20f;
+    public float speed;
     public Rigidbody2D rb;
     private GameObject player;
     public int damage;
@@ -13,7 +13,6 @@ public class Projectile : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        damage = 2;
         rb.velocity = transform.right * speed;
     }
 
