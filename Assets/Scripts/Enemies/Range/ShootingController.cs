@@ -15,6 +15,7 @@ public class ShootingController : MonoBehaviour
     {
         if (collider.gameObject.CompareTag("Player"))
         {
+            parent.GetComponentInParent<DialogueTrigger>().TriggerDialog();
             parent.setShoot(true);
         }
     }
