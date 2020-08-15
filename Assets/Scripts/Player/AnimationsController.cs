@@ -5,7 +5,7 @@ using UnityEngine;
 public class AnimationsController : MonoBehaviour
 {
     // Start is called before the first frame update
-    Animator animator;
+    public Animator animator;
     SpriteRenderer sprite;
     public bool bIsGrounded;
     void Start()

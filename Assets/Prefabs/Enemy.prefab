@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 7052335577276426201}
   - component: {fileID: 7052335577276426200}
   - component: {fileID: 468006336421876491}
+  - component: {fileID: 1794089190}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -185,6 +186,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 1
   currhealth: 0
+--- !u!114 &1794089190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7052335577276426182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2eb332616002d24ba682bfba94ea921, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    title: Enemigo nivel 1
+    sentences:
+    - "\xA1Ya muere, basura!"
+    - "\xA1Para de una vez!"
 --- !u!1 &7052335578288292568
 GameObject:
   m_ObjectHideFlags: 0
