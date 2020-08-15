@@ -11,14 +11,16 @@ public class EnemyController : MonoBehaviour
     public Transform firePoint;
     public GameObject projectilePrefab;
     public float timeBetweenShots, pastTime;
+    Animator animator;
     void Start()
     {
         canShoot = false;
-        timeBetweenShots = 1f;
+        timeBetweenShots = 0.7f;
         pastTime = 0f;
         movingRight = false;
         isLeft = false;
         player = GameObject.FindGameObjectWithTag("Player");
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -28,6 +30,7 @@ public class EnemyController : MonoBehaviour
         //Debug.Log(canShoot);
         //Debug.Log(Time.deltaTime);
 
+        print("\nPlayer: "+player.transform.localPosition.x+"\nEnemy: "+transform.localPosition.x);
         isLeft = player.transform.localPosition.x > transform.localPosition.x;
 
         if (isLeft && !movingRight)
@@ -54,7 +57,9 @@ public class EnemyController : MonoBehaviour
     void Shoot()
     {   
         Instantiate(projectilePrefab,firePoint.position,firePoint.rotation);
+        animator.SetTrigger("Shot");
         pastTime = 0f;
+        print("Shooting");
         //timeBetweenShots += Time.deltaTime;
     }
 

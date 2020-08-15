@@ -59,7 +59,7 @@ MonoBehaviour:
     m_Bits: 256
   attackRange: 1.06
   damage: 1
-  speed: 0
+  speed: 3
 --- !u!114 &8863887251641915775
 MonoBehaviour:
   m_ObjectHideFlags: 0
