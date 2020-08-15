@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -11,11 +12,16 @@ public class PlayerHealth : MonoBehaviour
     public Image[] hearts;
     public Sprite fullHeart;
     public Sprite emptyHeart;
+    public ParticleSystem system;
+    public GameObject Canvas;
+    bool isDead = false;
 
     // Start is called before the first frame update
     void Start()
     {
         currhealth = maxHealth;
+        Canvas = GameObject.Find("DeadCanvas");
+        Canvas.SetActive(false);
     }
 
     // Update is called once per frame
@@ -45,6 +51,7 @@ public class PlayerHealth : MonoBehaviour
     }
 
     public void takeDamage(int damage){
+        GetComponent<AnimationsController>().animator.SetTrigger("isDamage");
         if(currhealth > damage){
             currhealth -= damage;
         }else{
@@ -54,6 +61,24 @@ public class PlayerHealth : MonoBehaviour
     }
     void Die()
     {
-        Destroy(gameObject);
+        // Destroy(gameObject);
+        if (!isDead)
+        {
+            isDead = true;
+            GetComponent<SpriteRenderer>().enabled = false;
+            Instantiate(system, transform.position, Quaternion.identity);
+            // system.Play();
+            // GetComponent<SpriteRenderer>().enabled = false;
+            // GameObject.Find("DeadCanvas").SetActive(true);
+            GameManager.PlayerDead();
+            Canvas.SetActive(true);
+            StartCoroutine(LoadLevel());
+
+        }
+    }
+    IEnumerator LoadLevel()
+    {
+        yield return new WaitForSeconds(3);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

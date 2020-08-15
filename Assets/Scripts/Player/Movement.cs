@@ -34,6 +34,8 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (GameManager.IsInputEnabled)
+        {
         xMov = Input.GetKey(KeyCode.A)?-1:Input.GetKey(KeyCode.D)?1:0;
         //yMov = Input.GetAxis("Jump") * speed;
         yMov = Input.GetKey(KeyCode.A)?1:0;
@@ -56,6 +58,8 @@ public class Movement : MonoBehaviour
             yMov = Input.GetAxis("Jump") * force;
             rb.velocity = rb.velocity = new Vector2(rb.velocity.x, yMov);
         }
+        }
+        
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {

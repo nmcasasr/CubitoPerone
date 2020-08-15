@@ -199,7 +199,7 @@ Transform:
   - {fileID: 1816169015}
   - {fileID: 795493325}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &477293027
 GameObject:
@@ -924,27 +924,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1143008593 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9062119598557470551, guid: bc06d19cacc0cea47928ead0ce430946,
-    type: 3}
-  m_PrefabInstance: {fileID: 1450329287}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1143008594
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1143008593}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70ba249f0ecd77742b59fc42a5a9d121, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textElement: {fileID: 0}
-  titleElement: {fileID: 0}
-  animator: {fileID: 0}
 --- !u!1 &1334533930
 GameObject:
   m_ObjectHideFlags: 0
@@ -1017,7 +996,7 @@ PrefabInstance:
     - target: {fileID: 7052335577276426181, guid: 6c8d8f1f7bdabfc479beb2e815064661,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.76
+      value: -1.06
       objectReference: {fileID: 0}
     - target: {fileID: 7052335577276426181, guid: 6c8d8f1f7bdabfc479beb2e815064661,
         type: 3}
@@ -1047,7 +1026,7 @@ PrefabInstance:
     - target: {fileID: 7052335577276426181, guid: 6c8d8f1f7bdabfc479beb2e815064661,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7052335577276426181, guid: 6c8d8f1f7bdabfc479beb2e815064661,
         type: 3}
@@ -1297,29 +1276,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1496819790}
   m_CullTransparentMesh: 0
---- !u!1 &1794089189 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7052335577276426182, guid: 6c8d8f1f7bdabfc479beb2e815064661,
-    type: 3}
-  m_PrefabInstance: {fileID: 1338041800}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1794089190
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1794089189}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b2eb332616002d24ba682bfba94ea921, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogue:
-    title: Enemigo nivel 1
-    sentences:
-    - "\xA1Ya muere, basura!"
-    - "\xA1Para de una vez!"
 --- !u!1 &1816169014
 GameObject:
   m_ObjectHideFlags: 0

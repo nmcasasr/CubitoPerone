@@ -9,6 +9,7 @@ TagManager:
   - Undefined
   - Head
   - LevelManager
+  - DeadCanvas
   layers:
   - Default
   - TransparentFX
