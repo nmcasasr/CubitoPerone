@@ -14,6 +14,7 @@ public class PlayerHealth : MonoBehaviour
     public Sprite emptyHeart;
     public ParticleSystem system;
     public GameObject Canvas;
+    public SoundManager soundManager;
     bool isDead = false;
 
     // Start is called before the first frame update
@@ -22,6 +23,7 @@ public class PlayerHealth : MonoBehaviour
         currhealth = maxHealth;
         Canvas = GameObject.Find("DeadCanvas");
         Canvas.SetActive(false);
+        soundManager = FindObjectOfType<SoundManager>();
     }
 
     // Update is called once per frame
@@ -64,6 +66,7 @@ public class PlayerHealth : MonoBehaviour
         // Destroy(gameObject);
         if (!isDead)
         {
+            soundManager.PlayDeadSound();
             isDead = true;
             GetComponent<SpriteRenderer>().enabled = false;
             Instantiate(system, transform.position, Quaternion.identity);

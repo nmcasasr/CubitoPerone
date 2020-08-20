@@ -43,7 +43,7 @@ public class EnemyMeleeController : MonoBehaviour
         if (canMove)
         {
             meleeRb.velocity = new Vector2((isLeft ? 0.1f : -0.1f) * speed, meleeRb.velocity.y / speed) * speed;
-            print("Movement");
+            //print("Movement");
         }
 
         if (timeBtwAttack <= 0)
