@@ -329,7 +329,7 @@ MonoBehaviour:
   bCanJump: 0
   platformLayerMask:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 2560
 --- !u!114 &7151915694737655942
 MonoBehaviour:
   m_ObjectHideFlags: 0

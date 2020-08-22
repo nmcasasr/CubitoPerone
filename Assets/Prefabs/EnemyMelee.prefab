@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2441353962762244762}
   - component: {fileID: 2441353962762244742}
   - component: {fileID: 3396497377800304631}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: EnemyMelee
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -185,6 +185,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 1
   currhealth: 0
+  soundManager: {fileID: 0}
 --- !u!1 &2441353963872692801
 GameObject:
   m_ObjectHideFlags: 0
@@ -194,7 +195,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2441353963872692800}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: AttackPos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -226,7 +227,7 @@ GameObject:
   - component: {fileID: 2441353964248040285}
   - component: {fileID: 2441353964248040283}
   - component: {fileID: 2441353964248040284}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: AttackRange
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -297,7 +298,7 @@ GameObject:
   - component: {fileID: 2441353964416460208}
   - component: {fileID: 2441353964416460223}
   - component: {fileID: 476990592}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: ViewRange
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -368,7 +369,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 385230036859580630}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: FloorDetectionL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
