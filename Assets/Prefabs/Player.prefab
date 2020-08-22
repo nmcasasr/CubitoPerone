@@ -327,6 +327,9 @@ MonoBehaviour:
   force: 20
   isGrounded: 1
   bCanJump: 0
+  platformLayerMask:
+    serializedVersion: 2
+    m_Bits: 512
 --- !u!114 &7151915694737655942
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -380,6 +383,7 @@ MonoBehaviour:
     type: 3}
   system: {fileID: 7157332382658066108, guid: 5bb099a025a34d54ea3b4f32eba525aa, type: 3}
   Canvas: {fileID: 0}
+  soundManager: {fileID: 0}
 --- !u!114 &1143008594
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -394,4 +398,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textElement: {fileID: 0}
   titleElement: {fileID: 0}
+  texts: []
   animator: {fileID: 0}
+  dialogCanvas: {fileID: 0}
+  time: 1.5
+  soundManager: {fileID: 0}

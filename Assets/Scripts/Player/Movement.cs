@@ -17,6 +17,7 @@ public class Movement : MonoBehaviour
     Vector2 initBCOffeset;
     public bool bCanJump;
     AnimationsController aController;
+    [SerializeField] private LayerMask platformLayerMask;
 
     // Start is called before the first frame update
     void Start()
@@ -61,18 +62,33 @@ public class Movement : MonoBehaviour
         }
         
     }
+    private bool IsGrounded()
+    {
+        float height = 5.0f;
+        RaycastHit2D raycastHit = Physics2D.BoxCast(bc.bounds.center, bc.bounds.size - new Vector3(0.4f, 0f, 0f), 0f, Vector2.down, height, platformLayerMask);
+        Color raycolor;
+        if (raycastHit.collider != null)
+        {
+            raycolor = Color.green;
+        } else
+        {
+            raycolor = Color.red;
+        }
+        
+        return raycastHit.collider != null;
+    }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        bCanJump = (collision.gameObject.CompareTag("Platform"));
-        aController.bIsGrounded = (collision.gameObject.CompareTag("Platform"));
+        bCanJump = IsGrounded();
+        aController.bIsGrounded = IsGrounded();
     }
     private void OnCollisionExit2D(Collision2D collision)
     {
-        bCanJump = !(collision.gameObject.CompareTag("Platform"));
+        bCanJump = !(IsGrounded());
     }
     private void OnCollisionStay2D(Collision2D collision)
     {
-        bCanJump = (collision.gameObject.CompareTag("Platform"));
-        aController.bIsGrounded = (collision.gameObject.CompareTag("Platform"));
+        bCanJump = (IsGrounded());
+        aController.bIsGrounded = (IsGrounded());
     }
 }
