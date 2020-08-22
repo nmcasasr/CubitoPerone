@@ -46,14 +46,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSource: {fileID: 0}
   blow: {fileID: 0}
-  shoot: {fileID: 0}
-  impact: {fileID: 0}
+  shoot: {fileID: 8300000, guid: 6474ab3a823e44e4c8dba63da7327bb9, type: 3}
+  impact: {fileID: 8300000, guid: 942f5f4f16c0bff48ad66514efd4870c, type: 3}
   damage: {fileID: 8300000, guid: 02ef9ec3f29944a42adcc319ce6d1c0d, type: 3}
   victory: {fileID: 0}
   powerUp: {fileID: 0}
   dialogBoss: {fileID: 8300000, guid: 7f8064bdc57a074428fb85ec417708fe, type: 3}
   dialogEnemy: {fileID: 8300000, guid: 670d8dd4c22b99047a2aeb7c29b4ad6c, type: 3}
-  dead: {fileID: 8300000, guid: c6528dc869c84414e8702a968381e0a4, type: 3}
+  dead: {fileID: 8300000, guid: eb0e8eec59fa65145b8095c44a692c59, type: 3}
 --- !u!82 &8303438060595475880
 AudioSource:
   m_ObjectHideFlags: 0

@@ -7,9 +7,11 @@ public class HeadProjectile : MonoBehaviour
     public float speed;
     public float lifeTime;
     public int damage;
+    public SoundManager soundManager;
     void Start()
     {
         Invoke("DestroyProjectile", lifeTime);
+        soundManager = FindObjectOfType<SoundManager>();
     }
 
     // Update is called once per frame
@@ -27,6 +29,7 @@ public class HeadProjectile : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         speed = 0;
+        soundManager.PlayImpactSound();
         if (collision.gameObject.CompareTag("Player"))
         {
             collision.gameObject.GetComponentInChildren<Head>().setCanShoot(true);

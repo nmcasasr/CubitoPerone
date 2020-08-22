@@ -12,6 +12,7 @@ public class EnemyController : MonoBehaviour
     public GameObject projectilePrefab;
     public float timeBetweenShots, pastTime;
     Animator animator;
+    public SoundManager soundManager;
     void Start()
     {
         canShoot = false;
@@ -21,6 +22,7 @@ public class EnemyController : MonoBehaviour
         isLeft = false;
         player = GameObject.FindGameObjectWithTag("Player");
         animator = GetComponent<Animator>();
+        soundManager = FindObjectOfType<SoundManager>();
     }
 
     // Update is called once per frame
@@ -60,6 +62,7 @@ public class EnemyController : MonoBehaviour
         animator.SetTrigger("Shot");
         pastTime = 0f;
         print("Shooting");
+        soundManager.PlayShootSound();
         //timeBetweenShots += Time.deltaTime;
     }
 

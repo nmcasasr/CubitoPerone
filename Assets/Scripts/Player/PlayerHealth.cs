@@ -54,7 +54,9 @@ public class PlayerHealth : MonoBehaviour
 
     public void takeDamage(int damage){
         GetComponent<AnimationsController>().animator.SetTrigger("isDamage");
+
         if(currhealth > damage){
+            soundManager.PlayDamageSound();
             currhealth -= damage;
         }else{
             currhealth = 0;
