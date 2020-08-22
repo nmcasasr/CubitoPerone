@@ -54,18 +54,19 @@ public class Movement : MonoBehaviour
             bc.size = new Vector2(initBCSize.x, initBCSize.y);
             bc.offset = new Vector2(initBCOffeset.x, initBCOffeset.y);
         }
-        if (Input.GetAxis("Jump")>0 && bCanJump)
+        if (Input.GetAxis("Jump")>0 && IsGrounded())
         {
             yMov = Input.GetAxis("Jump") * force;
             rb.velocity = rb.velocity = new Vector2(rb.velocity.x, yMov);
         }
         }
-        
+        aController.bIsGrounded = IsGrounded();
+
     }
     private bool IsGrounded()
     {
-        float height = 5.0f;
-        RaycastHit2D raycastHit = Physics2D.BoxCast(bc.bounds.center, bc.bounds.size - new Vector3(0.4f, 0f, 0f), 0f, Vector2.down, height, platformLayerMask);
+        float height = 0.5f;
+        RaycastHit2D raycastHit = Physics2D.BoxCast(bc.bounds.center, bc.bounds.size - new Vector3(0.5f, 0f, 0f), 0f, Vector2.down, height, platformLayerMask);
         Color raycolor;
         if (raycastHit.collider != null)
         {
@@ -74,21 +75,25 @@ public class Movement : MonoBehaviour
         {
             raycolor = Color.red;
         }
-        
+        Debug.DrawRay(bc.bounds.center + new Vector3(bc.bounds.extents.x, 0), Vector2.down * (bc.bounds.extents.y + height), raycolor);
+        Debug.DrawRay(bc.bounds.center - new Vector3(bc.bounds.extents.x, 0), Vector2.down * (bc.bounds.extents.y + height), raycolor);
+        Debug.DrawRay(bc.bounds.center - new Vector3(bc.bounds.extents.x, bc.bounds.extents.y+height), Vector2.right * (bc.bounds.extents.x), raycolor);
+        //Debug.DrawRay(bc.bounds.center + new Vector3(bc.bounds.extents.x, 0), Vector2.down * (bc.bounds.extents.y + height), raycolor);
+        Debug.Log(raycastHit.collider);
         return raycastHit.collider != null;
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        bCanJump = IsGrounded();
-        aController.bIsGrounded = IsGrounded();
+        //bCanJump = IsGrounded();
+       /// aController.bIsGrounded = IsGrounded();
     }
     private void OnCollisionExit2D(Collision2D collision)
     {
-        bCanJump = !(IsGrounded());
+        ///bCanJump = !(IsGrounded());
     }
     private void OnCollisionStay2D(Collision2D collision)
     {
-        bCanJump = (IsGrounded());
-        aController.bIsGrounded = (IsGrounded());
+       /// bCanJump = (IsGrounded());
+       /// aController.bIsGrounded = (IsGrounded());
     }
 }

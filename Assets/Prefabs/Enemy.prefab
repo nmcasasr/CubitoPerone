@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 7052335577276426200}
   - component: {fileID: 468006336421876491}
   - component: {fileID: 1794089190}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -106,6 +106,7 @@ MonoBehaviour:
     type: 3}
   timeBetweenShots: 3
   pastTime: 0
+  soundManager: {fileID: 0}
 --- !u!50 &7052335577276426202
 Rigidbody2D:
   serializedVersion: 4
@@ -186,6 +187,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 1
   currhealth: 0
+  soundManager: {fileID: 0}
 --- !u!114 &1794089190
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -203,6 +205,8 @@ MonoBehaviour:
     sentences:
     - "\xA1Ya muere, basura!"
     - "\xA1Para de una vez!"
+  soundManager: {fileID: 0}
+  dialogType: 
 --- !u!1 &7052335578288292568
 GameObject:
   m_ObjectHideFlags: 0
@@ -212,7 +216,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7052335578288292575}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: FirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -244,7 +248,7 @@ GameObject:
   - component: {fileID: 7052335578291800885}
   - component: {fileID: 7052335578291800843}
   - component: {fileID: 7052335578291800884}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: FireRange
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -304,3 +308,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parent: {fileID: 7052335577276426180}
+  Dialog: 0
