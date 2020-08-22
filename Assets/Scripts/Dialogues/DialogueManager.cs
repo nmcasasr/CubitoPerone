@@ -7,13 +7,23 @@ public class DialogueManager : MonoBehaviour
 {
 
     public TextMeshProUGUI textElement,titleElement;
+    public TextMeshProUGUI[] texts;
     private Queue<string> sentences;
 
-    public Animator animator; 
+    public Animator animator;
+    public GameObject dialogCanvas;
+    public float time = 1.5f;
+    public SoundManager soundManager;
 
     void Start()
     {
         sentences = new Queue<string>();
+        soundManager = FindObjectOfType<SoundManager>();
+        dialogCanvas = GameObject.FindGameObjectWithTag("Dialog");
+        animator = dialogCanvas.GetComponent<Animator>();
+        texts = dialogCanvas.GetComponentsInChildren<TextMeshProUGUI>();
+        textElement = texts[1];
+        titleElement = texts[0];
     }
 
     public void StartDialogue(Dialogue dialogue)
@@ -57,7 +67,8 @@ public class DialogueManager : MonoBehaviour
             textElement.text += letter;
             yield return null;
         }
-
+        yield return new WaitForSeconds(3);
+        DisplayNextSentence();
     }
 
     public void EndDialogue()

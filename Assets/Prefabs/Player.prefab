@@ -306,7 +306,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 3
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 754743a4b38c191409dae3adfb113bad, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -352,6 +352,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4db0dad08926f544a0a3014f01562d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   bIsGrounded: 0
 --- !u!114 &1427502695
 MonoBehaviour:
@@ -378,6 +379,7 @@ MonoBehaviour:
   emptyHeart: {fileID: 6502811587687461928, guid: 432d0874e64d4e1409392182e05e3576,
     type: 3}
   system: {fileID: 7157332382658066108, guid: 5bb099a025a34d54ea3b4f32eba525aa, type: 3}
+  Canvas: {fileID: 0}
 --- !u!114 &1143008594
 MonoBehaviour:
   m_ObjectHideFlags: 0
