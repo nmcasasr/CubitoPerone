@@ -5221,49 +5221,25 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1427502695, guid: bc06d19cacc0cea47928ead0ce430946, type: 3}
-      propertyPath: hearts.Array.size
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1427502695, guid: bc06d19cacc0cea47928ead0ce430946, type: 3}
-      propertyPath: hearts.Array.data[5]
+      propertyPath: hearts.Array.data[0]
       value: 
-      objectReference: {fileID: 112854704}
-    - target: {fileID: 1427502695, guid: bc06d19cacc0cea47928ead0ce430946, type: 3}
-      propertyPath: hearts.Array.data[6]
-      value: 
-      objectReference: {fileID: 112854704}
-    - target: {fileID: 1427502695, guid: bc06d19cacc0cea47928ead0ce430946, type: 3}
-      propertyPath: hearts.Array.data[7]
-      value: 
-      objectReference: {fileID: 112854704}
-    - target: {fileID: 1427502695, guid: bc06d19cacc0cea47928ead0ce430946, type: 3}
-      propertyPath: hearts.Array.data[8]
-      value: 
-      objectReference: {fileID: 112854704}
-    - target: {fileID: 1427502695, guid: bc06d19cacc0cea47928ead0ce430946, type: 3}
-      propertyPath: hearts.Array.data[9]
-      value: 
-      objectReference: {fileID: 112854704}
-    - target: {fileID: 1427502695, guid: bc06d19cacc0cea47928ead0ce430946, type: 3}
-      propertyPath: hearts.Array.data[4]
-      value: 
-      objectReference: {fileID: 112854704}
-    - target: {fileID: 1427502695, guid: bc06d19cacc0cea47928ead0ce430946, type: 3}
-      propertyPath: hearts.Array.data[3]
-      value: 
-      objectReference: {fileID: 1109208970}
-    - target: {fileID: 1427502695, guid: bc06d19cacc0cea47928ead0ce430946, type: 3}
-      propertyPath: hearts.Array.data[2]
-      value: 
-      objectReference: {fileID: 70748647}
+      objectReference: {fileID: 1936648108}
     - target: {fileID: 1427502695, guid: bc06d19cacc0cea47928ead0ce430946, type: 3}
       propertyPath: hearts.Array.data[1]
       value: 
       objectReference: {fileID: 1781726537}
     - target: {fileID: 1427502695, guid: bc06d19cacc0cea47928ead0ce430946, type: 3}
-      propertyPath: hearts.Array.data[0]
+      propertyPath: hearts.Array.data[2]
       value: 
-      objectReference: {fileID: 1936648108}
+      objectReference: {fileID: 70748647}
+    - target: {fileID: 1427502695, guid: bc06d19cacc0cea47928ead0ce430946, type: 3}
+      propertyPath: hearts.Array.data[3]
+      value: 
+      objectReference: {fileID: 1109208970}
+    - target: {fileID: 1427502695, guid: bc06d19cacc0cea47928ead0ce430946, type: 3}
+      propertyPath: hearts.Array.data[4]
+      value: 
+      objectReference: {fileID: 112854704}
     - target: {fileID: 1427502695, guid: bc06d19cacc0cea47928ead0ce430946, type: 3}
       propertyPath: soundManager
       value: 
@@ -5322,11 +5298,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9062119598557470547, guid: bc06d19cacc0cea47928ead0ce430946,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9062119598557470551, guid: bc06d19cacc0cea47928ead0ce430946,
         type: 3}
