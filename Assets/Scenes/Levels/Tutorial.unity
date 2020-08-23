@@ -2590,6 +2590,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 9062119598557470556, guid: bc06d19cacc0cea47928ead0ce430946,
+        type: 3}
+      propertyPath: platformLayerMask.m_Bits
+      value: 512
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc06d19cacc0cea47928ead0ce430946, type: 3}
 --- !u!1001 &1031198819
