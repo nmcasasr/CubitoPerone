@@ -13,6 +13,7 @@ public class SoundManager : MonoBehaviour
     public AudioClip victory;
     public AudioClip powerUp;
     public AudioClip dialogBoss;
+    public AudioClip dialogBossFinal;
     public AudioClip dialogEnemy;
     public AudioClip dead;
     // Start is called before the first frame update
@@ -99,9 +100,18 @@ public class SoundManager : MonoBehaviour
 
             
             }
-            if (type == "enemy")
+        if (type == "bossFinal")
+        {
+            if (dialogBossFinal)
             {
-                if (dialogBoss)
+                audioSource.PlayOneShot(dialogBossFinal);
+            }
+
+
+        }
+        if (type == "enemy")
+            {
+                if (dialogEnemy)
                 {
                 audioSource.PlayOneShot(dialogEnemy);
             }

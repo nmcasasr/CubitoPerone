@@ -67,7 +67,7 @@ public class DialogueManager : MonoBehaviour
             textElement.text += letter;
             yield return null;
         }
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(time);
         DisplayNextSentence();
     }
 
