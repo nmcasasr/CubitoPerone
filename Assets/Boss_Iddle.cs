@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Boss_Iddle : StateMachineBehaviour
 {
-    public float attackRange = 0.1f;
+    public float attackRange = 0.01f;
 
     Transform player;
     Rigidbody2D rb;

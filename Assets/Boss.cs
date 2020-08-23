@@ -20,6 +20,7 @@ public class Boss : MonoBehaviour
     public Rigidbody2D rb;
 
     public Animator animator;
+    public SoundManager soundManager;
 
     public bool isFlipped = false;
 
@@ -28,8 +29,12 @@ public class Boss : MonoBehaviour
         Laser_Base.GetComponent<Renderer>().enabled = false;
         Laser_Body.GetComponent<Renderer>().enabled = false;
         Laser_Floor.GetComponent<Renderer>().enabled = false;
+        Laser_Base.GetComponent<Animator>().enabled = false;
+        Laser_Body.GetComponent<Animator>().enabled = false;
+        Laser_Floor.GetComponent<Animator>().enabled = false;
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
+        soundManager = FindObjectOfType<SoundManager>();
     }
 
     private void Update()
@@ -72,6 +77,7 @@ public class Boss : MonoBehaviour
 
     IEnumerator startShootingAnimation()
     {
+        soundManager.PlayLaserSound();
         yield return new WaitForSeconds(0.2f);
 
         animator.SetBool("isShooting", true);
@@ -79,9 +85,12 @@ public class Boss : MonoBehaviour
         Laser_Base.GetComponent<Renderer>().enabled = true;
         Laser_Body.GetComponent<Renderer>().enabled = true;
         Laser_Floor.GetComponent<Renderer>().enabled = true;
+        Laser_Base.GetComponent<Animator>().enabled = true;
+        Laser_Body.GetComponent<Animator>().enabled = true;
+        Laser_Floor.GetComponent<Animator>().enabled = true;
+
 
         //yield return new WaitForSeconds(waitTime1);
-
         Laser.GetComponent<LaserController>().isActive = true;
 
         yield return new WaitForSeconds(waitTime2);
@@ -91,16 +100,13 @@ public class Boss : MonoBehaviour
         Laser_Base.GetComponent<Renderer>().enabled = false;
         Laser_Body.GetComponent<Renderer>().enabled = false;
         Laser_Floor.GetComponent<Renderer>().enabled = false;
+        Laser_Base.GetComponent<Animator>().enabled = false;
+        Laser_Body.GetComponent<Animator>().enabled = false;
+        Laser_Floor.GetComponent<Animator>().enabled = false;
         Laser.GetComponent<LaserController>().isActive = false;
 
         animator.ResetTrigger("Attack");
 
         canShoot = true;
-    }
-
-    IEnumerator stopShootingAnimation()
-    {
-        yield return new WaitForSeconds(1);
-        Laser.GetComponent<LaserController>().isActive = false;
     }
 }

@@ -458,7 +458,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: bonesCox
   - m_Version: 1
-    m_Start: 14.184489795918367
+    m_Start: 14.833333333333334
     m_ClipIn: 0
     m_Asset: {fileID: -8990231742204591244}
     m_Duration: 1.2655102040816324
@@ -1456,7 +1456,7 @@ MonoBehaviour:
     m_Start: 0
     m_ClipIn: 0
     m_Asset: {fileID: -3901970040953479294}
-    m_Duration: 14.184489795918367
+    m_Duration: 14.55
     m_TimeScale: 1
     m_ParentTrack: {fileID: 118046241467456408}
     m_EaseInDuration: 0

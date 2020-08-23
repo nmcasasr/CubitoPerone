@@ -79,7 +79,7 @@ public class Movement : MonoBehaviour
         Debug.DrawRay(bc.bounds.center - new Vector3(bc.bounds.extents.x, 0), Vector2.down * (bc.bounds.extents.y + height), raycolor);
         Debug.DrawRay(bc.bounds.center - new Vector3(bc.bounds.extents.x, bc.bounds.extents.y+height), Vector2.right * (bc.bounds.extents.x), raycolor);
         //Debug.DrawRay(bc.bounds.center + new Vector3(bc.bounds.extents.x, 0), Vector2.down * (bc.bounds.extents.y + height), raycolor);
-        Debug.Log(raycastHit.collider);
+        //Debug.Log(raycastHit.collider);
         return raycastHit.collider != null;
     }
     private void OnCollisionEnter2D(Collision2D collision)

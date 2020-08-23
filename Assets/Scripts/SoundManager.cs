@@ -16,13 +16,24 @@ public class SoundManager : MonoBehaviour
     public AudioClip dialogBossFinal;
     public AudioClip dialogEnemy;
     public AudioClip dead;
+    public AudioClip laser;
     // Start is called before the first frame update
 
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();
     }
-
+    public void PlayLaserSound()
+    {
+            if (laser != null)
+            {
+                audioSource.PlayOneShot(laser);
+            }
+            else
+            {
+                Debug.Log("laser Sound Missing");
+            }
+    }
     public void PlayShootSound()
     {
         if (shoot != null)

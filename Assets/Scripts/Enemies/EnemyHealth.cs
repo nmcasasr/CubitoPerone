@@ -7,12 +7,15 @@ public class EnemyHealth : MonoBehaviour
     public int maxHealth = 3;
     public int currhealth;
     public SoundManager soundManager;
+    public bool isBoss = false;
+    public GameObject respawnManager;
 
     // Start is called before the first frame update
     void Start()
     {
         currhealth = maxHealth;
         soundManager = FindObjectOfType<SoundManager>();
+        respawnManager = GameObject.FindGameObjectWithTag("LevelManager");
     }
 
     // Update is called once per frame
@@ -36,6 +39,10 @@ public class EnemyHealth : MonoBehaviour
     void Die()
     {
         // soundManager.PlayDamageSound();
+        if (isBoss)
+        {
+            respawnManager.gameObject.GetComponent<MenuController>().LoadNextScene();
+        }
         Destroy(gameObject);
     }
 }

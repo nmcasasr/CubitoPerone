@@ -16,6 +16,8 @@ public class PlayerHealth : MonoBehaviour
     public GameObject Canvas;
     public SoundManager soundManager;
     bool isDead = false;
+    public bool isBoss = false;
+    public GameObject respawnManager;
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +26,7 @@ public class PlayerHealth : MonoBehaviour
         Canvas = GameObject.Find("DeadCanvas");
         Canvas.SetActive(false);
         soundManager = FindObjectOfType<SoundManager>();
+        respawnManager = GameObject.FindGameObjectWithTag("LevelManager");
     }
 
     // Update is called once per frame
@@ -76,8 +79,15 @@ public class PlayerHealth : MonoBehaviour
             // GetComponent<SpriteRenderer>().enabled = false;
             // GameObject.Find("DeadCanvas").SetActive(true);
             GameManager.PlayerDead();
+            if (isBoss)
+            {
+                respawnManager.gameObject.GetComponent<MenuController>().LoadNextScene();
+            } else
+            {
             Canvas.SetActive(true);
             StartCoroutine(LoadLevel());
+            }
+            
 
         }
     }

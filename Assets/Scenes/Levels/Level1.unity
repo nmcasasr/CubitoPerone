@@ -2291,7 +2291,7 @@ PrefabInstance:
     - target: {fileID: 4755201009203858776, guid: 9dc6f10fe801ba34eae8db7a0a7020a6,
         type: 3}
       propertyPath: m_SortingOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4755201009203858776, guid: 9dc6f10fe801ba34eae8db7a0a7020a6,
         type: 3}
@@ -5357,6 +5357,11 @@ PrefabInstance:
       propertyPath: speed
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 4755201009203858776, guid: 9dc6f10fe801ba34eae8db7a0a7020a6,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4755201010449570460, guid: 9dc6f10fe801ba34eae8db7a0a7020a6,
         type: 3}
       propertyPath: m_Layer
@@ -7190,6 +7195,11 @@ PrefabInstance:
         type: 3}
       propertyPath: speed
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4755201009203858776, guid: 9dc6f10fe801ba34eae8db7a0a7020a6,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4755201010449570460, guid: 9dc6f10fe801ba34eae8db7a0a7020a6,
         type: 3}
@@ -12549,6 +12559,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 9062119598557470556, guid: bc06d19cacc0cea47928ead0ce430946,
+        type: 3}
+      propertyPath: platformLayerMask.m_Bits
+      value: 512
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc06d19cacc0cea47928ead0ce430946, type: 3}

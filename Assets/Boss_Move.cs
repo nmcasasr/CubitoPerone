@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class Boss_Move : StateMachineBehaviour
 {
-    public float speed = 20f;
-    public float attackRange = 0.1f;
+    public float speed = 70f;
+    public float attackRange = 0.01f;
     public bool isLeft;
 
     Transform player;
